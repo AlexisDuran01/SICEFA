@@ -2,13 +2,15 @@ let indexGestionProductoSeleccionado;
 let Gestionproductos = [];
 
 // Cargar datos de clientes desde un archivo JSON
-
-fetch("modulos/SICEFACentral/AdmProductos/Productos.json")
+const cargarTablaProductos=()=>{
+    fetch("modulos/SICEFACentral/AdmProductos/Productos.json")
     .then((response) => response.json())
     .then(function (jsondata) {
         Gestionproductos = jsondata;
         loadTablaGestionProductos();
     });
+}
+
 
 function addProducto()
 // Obtener valores de los campos de entrada

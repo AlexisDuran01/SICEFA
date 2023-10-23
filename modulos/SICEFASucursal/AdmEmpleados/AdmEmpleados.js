@@ -1,13 +1,22 @@
 let indexEmpleadoSeleccionado;
 let Empleados = [];
-fetch("modulos/SICEFASucursal/AdmEmpleados/Empleados.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(function (jsondata) {
-            Empleados = jsondata;
-            cargarTablaEmpleados();
-        });
+
+const cargarTablaEmplea=()=>{
+
+    fetch("modulos/SICEFASucursal/AdmEmpleados/Empleados.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(function (jsondata) {
+        Empleados = jsondata;
+        cargarTablaEmpleados();
+    });
+
+    };
+ 
+
+
+
 function addEmpleado() {
     let id,
             nombre,

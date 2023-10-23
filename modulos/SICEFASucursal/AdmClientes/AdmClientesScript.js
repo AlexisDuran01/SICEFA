@@ -3,7 +3,8 @@ let clientes = [];
 
 // Cargar datos de clientes desde un archivo JSON
 
-fetch("modulos/SICEFASucursal/AdmClientes/Clientes.json")
+const cargarTablaClientes=()=>{
+    fetch("modulos/SICEFASucursal/AdmClientes/Clientes.json")
     .then(response => {
         return response.json();
     })
@@ -11,6 +12,9 @@ fetch("modulos/SICEFASucursal/AdmClientes/Clientes.json")
         clientes = jsondata;
         loadTablaClientes();
     });
+}
+
+
 
 function addCliente()
 // Obtener valores de los campos de entrada

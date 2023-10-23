@@ -9,7 +9,7 @@ function guardarArregloProductos() {
     ).then(
             function (jsonData) {
                 arregloProductos = jsonData;
-                console.log(arregloProductos[0]);
+                
 
             }
     );

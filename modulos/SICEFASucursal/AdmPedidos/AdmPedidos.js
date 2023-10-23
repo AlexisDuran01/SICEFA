@@ -1,14 +1,16 @@
 let indexCompraSeleccionado;
 let compras = [];
 
-fetch("modulos/SICEFASucursal/AdmPedidos/Pedidos.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(function (jsondata) {
-            compras = jsondata;
-            cargarTablaPedidos();
-        });
+const cargarTablaPedido=()=>  {
+    fetch("modulos/SICEFASucursal/AdmPedidos/Pedidos.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(function (jsondata) {
+        compras = jsondata;
+        cargarTablaPedidos();
+    });
+}; 
 
 function addCompra() {
     let idCompra="RF05",

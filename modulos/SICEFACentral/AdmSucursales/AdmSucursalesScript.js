@@ -1,7 +1,8 @@
 let indexSucursalSeleccionado;
 let sucursales = [];
 
-fetch("modulos/SICEFACentral/AdmSucursales/Sucursales.json")
+const cargarTablaSucursales=()=>{
+    fetch("modulos/SICEFACentral/AdmSucursales/Sucursales.json")
     .then(response => {
         return response.json();
     })
@@ -9,6 +10,7 @@ fetch("modulos/SICEFACentral/AdmSucursales/Sucursales.json")
         sucursales = jsondata;
         loadTablaSucursales();
     });
+};
 
 function addSucursal() {
     let nombreSucursal = document.getElementById("txtNombreSucursal").value;

@@ -19,8 +19,10 @@ function DirigirSucursalesCentral(){
         }
     ).then(
         function (html) {
+          
             document.getElementById("contenedorPrincipal").innerHTML = html;
             document.getElementById("style1").innerHTML = "<link href='modulos/SICEFACentral/AdmSucursales/AdmSucursalesStyle.css' rel='stylesheet' type='text/css' id='style1'/>";
+            cargarTablaSucursales();
         }
     );
 }
@@ -33,8 +35,10 @@ function DirigirProductosCentral(){
         }
     ).then(
         function (html) {
+            
             document.getElementById("contenedorPrincipal").innerHTML = html;
             document.getElementById("style1").innerHTML = "<link href='modulos/SICEFACentral/AdmProductos/AdmProductos.css' rel='stylesheet' type='text/css' id='style1'/>";
+            cargarTablaProductos();
         }
     );
 }
@@ -77,7 +81,9 @@ function DirigirClientesSucursal(){
         function (html) {
             document.getElementById("contenedorPrincipal").innerHTML = html;
             document.getElementById("style1").innerHTML = "<link href='modulos/SICEFASucursal/AdmClientes/AdmClientesStyle.css' type='text/css' rel='stylesheet'  id='style1'/>";
+            cargarTablaClientes();
         }
+
     );
 }
 
@@ -91,6 +97,7 @@ function DirigirEmpleadosSucursal(){
         function (html) {
             document.getElementById("contenedorPrincipal").innerHTML = html;
             document.getElementById("style1").innerHTML = "<link href='modulos/SICEFASucursal/AdmEmpleados/AdmEmpleados.css' rel='stylesheet' type='text/css' id='style1'/>";
+            cargarTablaEmplea();
         }
     );
 }
@@ -119,6 +126,7 @@ function DirigirPedidosSucursal(){
         function (html) {
             document.getElementById("contenedorPrincipal").innerHTML = html;
             document.getElementById("style1").innerHTML = "<link href='modulos/SICEFASucursal/AdmPedidos/AdmPedidos.css' rel='stylesheet' type='text/css' id='style1'/>";
+            cargarTablaPedido();
         }
     );
 }
